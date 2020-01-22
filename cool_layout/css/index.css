@@ -1,0 +1,221 @@
+@import "./reset.css";
+@font-face {
+	font-family: Bukvarnaya;
+	src: url(./BUKVABOL.ttf);
+}
+@font-face {
+	font-family: Bebas Neue;
+	src: url(./BebasNeue-Regular.ttf);
+}
+@font-face {
+	font-family: Bukvarnaya-Bold;
+	src: url(./Bukvarnaya-Bold.ttf);
+}
+* {
+	text-transform: uppercase;
+}
+html,
+body {
+	width: 100%;
+	height: 800px;
+}
+
+/* TYPOGRAPHY */
+
+* {
+	font-family: Bukvarnaya;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 0.8em;
+	line-height: 100%;
+	color: #757575;
+}
+h2 {
+	font-family: Bebas Neue;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 2.5em;
+	line-height: 100%;
+	letter-spacing: 0.1em;
+	color: #000000;
+}
+.desc_content {
+	font-family: Bukvarnaya;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1.375em;
+	line-height: 100%;
+	/* identical to box height, or 22px */
+	color: #757575;
+}
+#container3 {
+	font-family: Bukvarnaya-Bold;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1em;
+	line-height: 100%;
+
+	color: #939393;
+}
+/* LAYOUTS */
+#wrap {
+	width: 1276px;
+	height: 647px;
+	margin: 77px auto 72px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#container1 {
+	flex: 1;
+	position: relative;
+}
+#container2 {
+	flex: 3;
+	position: relative;
+}
+#container3 {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+/* CONTAINER1 */
+#container1 header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+}
+#container1 header h1 {
+	text-indent: -99999em;
+	position: relative;
+}
+#container1 .logo {
+	width: 76px;
+	height: 32px;
+}
+#container1 header .logo_rec {
+	position: absolute;
+	width: 6px;
+	height: 32px;
+	background-color: #000;
+	top: 0;
+	left: 0;
+	transition: all 1s ease;
+}
+#container1 header .logo_rec:nth-child(2) {
+	transform: translateX(10px) rotate(12.47deg);
+}
+#container1 header .logo_rec:nth-child(3) {
+	transform: translateX(20px) rotate(29.5deg);
+}
+#container1 header .logo_rec:nth-child(4) {
+	transform: translate(30px) rotate(55.5deg);
+}
+#container1 header:hover .logo_rec:nth-child(2) {
+	transform: translateX(0px);
+}
+#container1 header:hover .logo_rec:nth-child(3) {
+	transform: translateX(0px);
+}
+#container1 header:hover .logo_rec:nth-child(4) {
+	transform: translateX(0px);
+}
+#container1 header .logo_circle {
+	position: absolute;
+	width: 12.5px;
+	height: 12.5px;
+	top: calc(32px - 12.5px);
+	left: 6px;
+	border-radius: 50%;
+	background-color: #000;
+	transition: all 0.8s 0.2s;
+	transform: translateX(52px);
+}
+#container1 header:hover .logo_circle {
+	transform: translateX(0px);
+}
+#container1 nav {
+	margin-top: 75px;
+}
+#container1 nav ul li {
+	margin-bottom: 18px;
+}
+#container1 nav ul li:hover a {
+	color: #000;
+}
+#container1 .desc {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+/* CONTAINER2 */
+
+#container2 .circle {
+	width: 642px;
+	height: 652px;
+	border-radius: 50%;
+	background: linear-gradient(#78acb2, #98c7cd);
+	margin: 0 auto;
+	opacity: 0;
+}
+#container2 img {
+	z-index: 1;
+	position: absolute;
+	width: 575px;
+	height: 647px;
+	right: -10px;
+	bottom: -80px;
+	opacity: 0;
+}
+/* CONTAINER3 */
+/* atag */
+#container3 a:first-child:after {
+	content: "+";
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background-color: #37383a;
+	font-size: 0.813em;
+	margin-left: 18px;
+	line-height: 37px;
+	text-align: center;
+}
+#container3 a:last-child:after {
+	content: "->";
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #37383a;
+	font-size: 0.813em;
+	margin-left: 23.5px;
+	line-height: 37px;
+	text-align: center;
+}
+#container3 .slider {
+	width: 45px;
+	height: 103px;
+	box-sizing: border-box;
+	font-weight: 600;
+}
+#container3 .slider div {
+	text-align: center;
+	padding-bottom: 19.3px;
+	border-bottom: 5px solid #d2d2d2;
+	margin-top: 5px;
+	color: #939393;
+	cursor: pointer;
+}
+#container3 .slider div:hover {
+	color: #000;
+}
+#container3 .slider .on {
+	font-size: 1.125em;
+	font-weight: 900;
+
+	color: #757575;
+}
